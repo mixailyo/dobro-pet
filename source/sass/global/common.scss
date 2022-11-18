@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  background-image: url(../img/svg/main-bg.svg);
+  background-size: cover;
+  overflow-x: hidden;
+
+  &__mobile-bg {
+    display: none;
+  }
+
+  @include vp-767 {
+    background: unset;
+    position: relative;
+
+    &__mobile-bg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}

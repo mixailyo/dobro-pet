@@ -1,0 +1,13 @@
+.widget {
+  @include adaptiveDesktopToMobile('padding-top', 80, 40);
+}
+.widget__wrapper {
+  border-radius: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include vp-767 {
+    height: 128px;
+  }
+}

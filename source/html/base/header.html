@@ -1,35 +1,42 @@
-<header class="header @@if (context.mod) { header--@@mod }">
+<header class="header">
   <div class="container">
-    @@if (!context.index) {
-      <a class="header__logo" href="index.html" aria-label="Переход на главную">
-        Логотип
-      </a>
-    }
-    @@if (context.index) {
-      <span class="header__logo">
-        Логотип
-      </span>
-    }
-
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20" aria-hidden="true">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-list-item header__menu-list-item--more">
+          <a href="#talk" class="header__menu-link">#надопоговорить</a>
+          <ul class="header__menu-inner-list">
+            <li class="header__menu-inner-list-item">
+              <a href="https://nadopogovorit.vk.company/rmzh" target="_blank" class="header__menu-inner-list-link">Рак молочной железы</a>
+            </li>
+            <li class="header__menu-inner-list-item">
+              <a href="https://nadopogovorit.vk.company/poteri" target="_blank" class="header__menu-inner-list-link">Перинатальные потери</a>
+            </li>
+            <li class="header__menu-inner-list-item">
+              <a href="https://nadopogovorit.vk.company/checkup" target="_blank" class="header__menu-inner-list-link">Чекапы</a>
+            </li>
+          </ul>
+        </li>
+        <li class="header__menu-list-item">
+          <a href="#manifesto" class="header__menu-link">Манифест</a>
+        </li>
+        <li class="header__menu-list-item">
+          <a href="#instructions" class="header__menu-link">Инструкции</a>
+        </li>
+        <li class="header__menu-list-item">
+          <a href="#help" class="header__menu-link">Как помочь</a>
+        </li>
+        <li class="header__menu-list-item">
+          <a href="#lighthouse" class="header__menu-link">Маяк</a>
+        </li>
+        <li class="header__menu-list-item">
+          <a href="#share" class="header__menu-link">Поделиться</a>
+        </li>
+      </ul>
     </nav>
+    <button class="header__hamburger hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
   </div>
 </header>

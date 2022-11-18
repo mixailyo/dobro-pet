@@ -1,0 +1,173 @@
+.section {
+  @include adaptiveDesktopToMobile('padding-top', 160, 120);
+}
+
+.section__title {
+  font-weight: 500;
+  @include adaptiveDesktopToMobile('font-size', 75, 40);
+  @include adaptiveDesktopToMobile('line-height', 80, 50);
+  text-align: center;
+  margin: 0;
+  @include adaptiveDesktopToMobile('margin-bottom', 28, 20);
+
+  &.h1 {
+    @include adaptiveDesktopToMobile('font-size', 90, 40);
+    @include adaptiveDesktopToMobile('line-height', 84, 50);
+  }
+
+  &.h3 {
+    @include adaptiveDesktopToMobile('font-size', 58, 40);
+    @include adaptiveDesktopToMobile('line-height', 60, 50);
+  }
+
+  &.h4 {
+    @include adaptiveDesktopToMobile('font-size', 58, 32);
+    @include adaptiveDesktopToMobile('line-height', 60, 38);
+  }
+}
+
+.section__description {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.44;
+}
+
+.section__wrapper {
+}
+.section__left-wrapper {
+}
+.section__right-wrapper {
+}
+.section__subtitle {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  @include adaptiveDesktopToMobile('margin-bottom', 20, 10);
+  text-align: center;
+}
+
+.section__slider {
+  @include adaptiveDesktopToMobile('margin-top', 72, 40);
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-bottom: 45px;
+  overflow: visible;
+
+  .swiper-slide {
+    width: 380px;
+    min-height: 100%;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-navigation-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: $color-default-white;
+    box-shadow: 0px 100px 80px rgba(153, 164, 184, 0.0393604), 0px 41.7776px 33.4221px rgba(153, 164, 184, 0.056545), 0px 22.3363px 17.869px rgba(153, 164, 184, 0.07), 0px 12.5216px 10.0172px rgba(153, 164, 184, 0.083455), 0px 6.6501px 5.32008px rgba(153, 164, 184, 0.10064), 0px 2.76726px 2.21381px rgba(153, 164, 184, 0.14);
+    transition: $trans-default;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 34px;
+      height: 12px;
+      transform: translate(-50%, -50%);
+      background-image: url('../img/svg/navigation-arrow.svg');
+      background-size: cover;
+    }
+
+    &:not(.swiper-button-disabled) {
+      &:hover {
+        box-shadow: 
+          0px 100px 80px 5px rgba(153, 164, 184, 0.0393604), 
+          0px 41.7776px 33.4221px 5px rgba(153, 164, 184, 0.056545), 
+          0px 22.3363px 17.869px 5px rgba(153, 164, 184, 0.07), 
+          0px 12.5216px 10.0172px 5px rgba(153, 164, 184, 0.083455), 
+          0px 6.6501px 5.32008px 5px rgba(153, 164, 184, 0.10064), 
+          0px 2.76726px 2.21381px 5px rgba(153, 164, 184, 0.14);
+      }
+    }
+
+    &--prev {
+      left: -10px;
+    }
+
+    &--next {
+      right: -30px;
+      transform: translateY(-50%);
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
+
+  @include vp-767 {
+    padding-bottom: 50px;
+
+    .swiper-slide {
+      width: 100%;
+    }
+
+    .swiper-pagination {
+      display: block;
+      bottom: 0;
+    }
+  
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: $color-bunker;
+      margin: 0 8px!important;
+      opacity: 0.5;
+    }
+  
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    .swiper-navigation {
+      display: none;
+    }
+  }
+}
+.section__slide {
+  background: #FFFFFF;
+  box-shadow: 0px 27px 25px rgba(205, 195, 183, 0.49), 0px 41.7776px 33.4221px rgba(205, 195, 183, 0.056545), 0px 22.3363px 17.869px rgba(205, 195, 183, 0.07), 0px 12.5216px 10.0172px rgba(205, 195, 183, 0.083455), 0px 6.6501px 5.32008px rgba(113, 94, 71, 0.2006), 0px 2.76726px 2.21381px rgba(113, 94, 71, 0.41);
+  border-radius: 20px;
+  padding: 36px;
+  height: 100%;
+}
+.section__slide-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.27;
+  margin: 0 0 16px;
+}
+.section__slide-description {
+  font-size: 16px;
+  line-height: 1.44;
+  margin-bottom: 0;
+}

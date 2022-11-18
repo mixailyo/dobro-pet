@@ -1,5 +1,41 @@
 .footer {
-  padding: 40px 0;
+  @include adaptiveDesktopToMobile('padding-top', 190, 120);
+  padding-bottom: 60px;
+  font-size: 16px;
+}
+.footer__menu {
+}
+.footer__menu-list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
 
-  background-color: $color-neon-blue;
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__menu-list-item {
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  @include vp-1023 {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+  }
+}
+.footer__menu-link {
+  transition: $trans-default;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }

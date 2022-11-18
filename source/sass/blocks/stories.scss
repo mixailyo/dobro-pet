@@ -1,0 +1,128 @@
+.stories {
+  .section__wrapper {
+    display: grid;
+    grid-template-columns: 456px auto;
+    gap: 24px;
+  }
+
+  @include vp-1023 {
+    .section__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include vp-767 {
+    .section__wrapper {
+      grid-template-columns: auto;
+    }
+  }
+}
+.stories__subtitle {
+  text-align: left;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+.stories__title {
+  text-align: left;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+.stories__description {
+  @include vp-767 {
+    text-align: center;
+  }
+}
+.stories__link {
+  margin-top: 32px;
+
+  @include vp-767 {
+    margin: 32px auto;
+  }
+}
+.stories__slider {
+  @include adaptiveDesktopToMobile('width', 580, 200);
+  padding: 60px 0;
+  margin-left: auto;
+  margin-right: unset;
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: $color-bunker;
+    margin: 0 8px!important;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @include vp-1279 {
+    padding: 0 0 60px;
+  }
+
+  @include vp-767 {
+    width: 89vw;
+    padding-top: 0;
+
+    .swiper-pagination {
+      text-align: center;
+    }
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+.stories__slide {
+  display: flex;
+
+  @include vp-1279 {
+    flex-direction: column;
+  }
+}
+.stories__slide-photo {
+  margin-right: 32px;
+  width: 260px;
+  height: 260px;
+
+  @include vp-1279 {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 24px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: auto;
+  }
+}
+.stories__slide-text {
+}
+.stories__slide-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.27;
+  margin: 0 0 12px;
+  color: $color-default-black;
+}
+.stories__slide-description {
+  line-height: 1.44;
+}
+.stories__slide-link {
+  color: $color-navy-blue;
+  transition: $trans-default;
+
+  &:hover {
+    color: lighten($color: $color-navy-blue, $amount: 8);
+  }
+}

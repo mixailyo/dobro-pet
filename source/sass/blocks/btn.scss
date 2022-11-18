@@ -1,26 +1,23 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background: $color-default-black;
+  box-shadow: 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.246375), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.305), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.363625), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.438501), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.61);
+  border-radius: 14px;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 20px;
   color: $color-default-white;
+  transition: $trans-default;
 
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
+  &:hover {
+    box-shadow: 
+      0px 41.7776px 33.4221px 5px rgba(0, 0, 0, 0.246375), 
+      0px 22.3363px 17.869px 5px rgba(0, 0, 0, 0.305), 
+      0px 12.5216px 10.0172px 5px rgba(0, 0, 0, 0.363625), 
+      0px 6.6501px 5.32008px rgba(0, 0, 0, 0.438501), 
+      0px 2.76726px 2.21381px rgba(0, 0, 0, 0.61);
   }
 }

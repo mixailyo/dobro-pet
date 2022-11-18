@@ -14,10 +14,10 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  @include adaptiveDesktopToMobile('font-size', 18, 16);
+  line-height: 1.5;
+  font-family: $ff-default;
+  color: $color-text;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -126,4 +126,12 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
 }

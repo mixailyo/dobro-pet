@@ -1,0 +1,11 @@
+.go-talk {
+  width: 52px; 
+  height: 265px;
+  background-image: url('../img/svg/go-talk.svg');
+  position: absolute;
+  color: transparent;
+
+  @include vp-1023 {
+    display: none;
+  }
+}

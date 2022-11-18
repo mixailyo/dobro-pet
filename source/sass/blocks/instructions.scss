@@ -1,0 +1,12 @@
+.instructions {
+  overflow: hidden;
+  
+  .container {
+    position: relative;
+  }
+}
+
+.instructions__go-talk {
+  @include adaptiveDesktopToMobile('top', 90, 0);
+  left: 25px;
+}

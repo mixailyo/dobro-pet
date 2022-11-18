@@ -1,0 +1,22 @@
+.go-next {
+  margin: 0 auto;
+  @include adaptiveDesktopToMobile('margin-top', 60, 40);
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/svg/go-next.svg);
+  display: block;
+  animation: moveDown 1s ease-in-out infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes moveDown {
+  0%, 100% {
+    transform:translateY(0) rotateZ(.001deg)
+  }
+  50% {
+    transform:translateY(15px) rotateZ(.001deg)
+  }
+}
